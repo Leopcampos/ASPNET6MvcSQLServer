@@ -15,13 +15,13 @@ namespace SalesWebMvc.Models
         [Column("NAME")]
         [Required(ErrorMessage = "O nome deve ser informado")]
         [Display(Name = "Nome")]
-        [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {1} e no máximo {2} caracteres")]
+        [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {2} e no máximo {1} caracteres")]
         public string Name { get; set; }
 
         [Column("EMAIL")]
         [Required(ErrorMessage = "O email deve ser informado")]
         [Display(Name = "Email")]
-        [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {1} e no máximo {2} caracteres")]
+        [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {2} e no máximo {1} caracteres")]
         public string Email { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]

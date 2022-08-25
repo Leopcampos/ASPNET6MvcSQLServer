@@ -1,7 +1,7 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -31,9 +31,9 @@ body {
         color: #ffff !important;
     }
 
-    .navbar a:hover {
-        color: #333 !important;
-    }
+        .navbar a:hover {
+            color: #333 !important;
+        }
 
 .botaoSeller {
     width: 7rem;
@@ -53,37 +53,50 @@ body {
     color: white;
 }
 
-.Container{
-    display:flex;
-    justify-content:center;
-    width:100%;
+.Container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.footer{
-    position:absolute;
-    bottom:8.5%;
+.footer {
+    position: absolute;
+    bottom: 8.5%;
 }
 
-.tabela a{
+.tabela a {
     text-decoration: none;
+    color: black;
+    border-radius:5px;
+    padding: 5px 10px;
 }
 
-.tabela .td{
-    display:flex;
-    justify-content:flex-end;
+.tabela .td {
+    display: flex;
+    justify-content: flex-end;
 }
-
-.tabela .td a{
-    margin-left: 10px;
-    color:black;
-}
-
-    .tabela .td a:hover {
-        background: #6db33f;
-    }
+        .tabela a:hover {
+            background: #6db33f;   
+        }
 
 .tabela a:nth-child(3) {
     text-decoration: none;
     color: red;
 }
 
+.tabela a + a {
+    margin-left:10px;
+}
+
+.tabela tbody .box-td {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media (max-width: 775px){
+    .tabela{
+       overflow-x:auto;
+       display:block;
+    }
+}
