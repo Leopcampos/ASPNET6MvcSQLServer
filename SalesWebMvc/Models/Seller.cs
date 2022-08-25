@@ -24,9 +24,10 @@ namespace SalesWebMvc.Models
         [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {1} e no máximo {2} caracteres")]
         public string Email { get; set; }
 
-
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime BirthDate { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:C2}")]
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }
