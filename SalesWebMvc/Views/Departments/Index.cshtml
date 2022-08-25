@@ -1,15 +1,18 @@
 ﻿@model IEnumerable<SalesWebMvc.Models.Department>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Department";
 }
 
-<h1>Index</h1>
+<div class="Container">
+    <h2 class="ContainerDepartment">@ViewData["Title"]</h2>
+</div>
+
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-default botaoDepartment">Create New</a>
 </p>
-<table class="table">
+<table class="table tabela">
     <thead>
         <tr>
             <th>
@@ -24,9 +27,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <td class="td">
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>

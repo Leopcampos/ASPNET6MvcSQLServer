@@ -1,18 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+.navbar {
+    background-color: #6db33f !important;
+}
+
+    .navbar a {
+        color: #ffff !important;
+    }
+
+    .navbar a:hover {
+        color: #333 !important;
+    }
+
+.botaoSeller {
+    width: 7rem;
+    height: 3rem;
+    padding: 5px;
+    line-height: 2.1rem;
+    background: #6db33f;
+    color: white;
+}
+
+.botaoDepartment {
+    width: 7rem;
+    height: 3rem;
+    padding: 5px;
+    line-height: 2.1rem;
+    background: #6db33f;
+    color: white;
+}
+
+.Container{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+
+.footer{
+    position:absolute;
+    bottom:8.5%;
+}
+
+.tabela a{
+    text-decoration: none;
+}
+
+.tabela .td{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.tabela .td a{
+    margin-left: 10px;
+    color:black;
+}
+
+    .tabela .td a:hover {
+        background: #6db33f;
+    }
+
+.tabela a:nth-child(3) {
+    text-decoration: none;
+    color: red;
+}
+
