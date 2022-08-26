@@ -8,13 +8,11 @@ namespace SalesWebMvc.Models
     {
         [Key]
         [Column("ID")]
-        [Display(Name = "Id")]
         public int Id { get; set; }
 
         [Column("NAME")]
-        [Required(ErrorMessage = "O nome deve ser informado")]
-        [Display(Name = "Nome")]
-        [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {1} e no máximo {2} caracteres")]
+        [Required(ErrorMessage = "The name must be informed")]
+        [Display(Name = "Departament")]
         public string Name { get; set; }
 
         public ICollection<Seller> Sellers { get; set; } = new List<Seller>();

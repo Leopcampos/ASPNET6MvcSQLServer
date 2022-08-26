@@ -9,25 +9,26 @@ namespace SalesWebMvc.Models
     {
         [Key]
         [Column("ID")]
-        [Display(Name = "Id")]
         public int Id { get; set; }
 
         [Column("NAME")]
-        [Required(ErrorMessage = "O nome deve ser informado")]
-        [Display(Name = "Nome")]
-        //[StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {2} e no máximo {1} caracteres")]
+        [Required(ErrorMessage = "The name must be informed")]
+        [Display(Name = "Name")]
         public string Name { get; set; }
 
         [Column("EMAIL")]
-        [Required(ErrorMessage = "O email deve ser informado")]
+        [Required(ErrorMessage = "The email must be informed")]
         [Display(Name = "Email")]
-        [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {2} e no máximo {1} caracteres")]
+        [StringLength(80, MinimumLength = 10, ErrorMessage = "The {0} must have a minimum of {2} and a maximum of {1} characters")]
         public string Email { get; set; }
 
+        [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Birth Date")]
         public DateTime BirthDate { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:C2}")]
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Display(Name = "Salary")]
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }
