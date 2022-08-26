@@ -12,14 +12,15 @@ namespace SalesWebMvc.Models
         public int Id { get; set; }
 
         [Column("NAME")]
-        [Required(ErrorMessage = "The name must be informed")]
+        [Required(ErrorMessage = "{0} required")]
         [Display(Name = "Name")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "The {0} must have a minimum of {2} and a maximum of {1} characters")]
         public string Name { get; set; }
 
         [Column("EMAIL")]
-        [Required(ErrorMessage = "The email must be informed")]
-        [Display(Name = "Email")]
-        [StringLength(80, MinimumLength = 10, ErrorMessage = "The {0} must have a minimum of {2} and a maximum of {1} characters")]
+        [Required(ErrorMessage = "{0} required")]
+        [EmailAddress(ErrorMessage = "Enter a valid email")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [DataType(DataType.Date)]
@@ -27,7 +28,7 @@ namespace SalesWebMvc.Models
         [Display(Name = "Birth Date")]
         public DateTime BirthDate { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [DisplayFormat(DataFormatString = "{0:C2}")]
         [Display(Name = "Salary")]
         public double BaseSalary { get; set; }
 
