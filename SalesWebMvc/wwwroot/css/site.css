@@ -35,16 +35,7 @@ body {
             color: #333 !important;
         }
 
-.botaoSeller {
-    width: 7rem;
-    height: 3rem;
-    padding: 5px;
-    line-height: 2.1rem;
-    background: #6db33f;
-    color: white;
-}
-
-.botaoDepartment {
+.botao {
     width: 7rem;
     height: 3rem;
     padding: 5px;
