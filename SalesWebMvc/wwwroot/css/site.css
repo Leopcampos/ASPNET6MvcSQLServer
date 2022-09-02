@@ -14,6 +14,13 @@ html {
     }
 }
 
+:root {
+    --main-color: #66217b; /* cor base do site */
+    --color: white;
+    --hover: #9a4f96;
+    --green: #6db33f;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -24,50 +31,86 @@ body {
 }
 
 .navbar {
-    background-color: #6db33f !important;
+    background-color: var(--main-color) !important;
 }
 
     .navbar a {
-        color: #ffff !important;
+        color: var(--color) !important;
     }
 
         .navbar a:hover {
-            color: #333 !important;
+            color: var(--hover) !important;
         }
 
+ /* botao create new Departments/Sellers */
 .botao {
     width: 7rem;
     height: 3rem;
     padding: 5px;
     line-height: 2.1rem;
-    background: #6db33f;
-    color: white;
+    background: var(--main-color);
+    color: var(--color);
 }
 
+.botao:hover{
+    color:var(--hover);
+    filter:brightness(1.2);
+}
+
+/* Botao submit em Sales Record */
+.btn-primary{
+    background:var(--main-color);
+    border: none;
+    margin-top:.5rem;
+}
+
+.btn-primary:hover{
+    background:var(--main-color);
+    filter:brightness(1.2);
+}
+
+/* div para alinhar ao centro */
 .Container {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
+/* Cor dos titles */
+.Container h2 {
+    color: var(--main-color);
+}
+
+/* Footer */
+
 .footer {
+    background: var(--main-color);
     position: absolute;
     bottom: 8.5%;
 }
 
+.footer .container{
+    color: white;
+}
+
+/* Tabelas */
 .tabela a {
     text-decoration: none;
     color: black;
     border-radius:5px;
     padding: 5px 10px;
 }
-
+.alert-success{
+    color:var(--color);
+    background-color:var(--main-color);
+}
 .tabela .td {
     display: flex;
     justify-content: flex-end;
 }
         .tabela a:hover {
-            background: #6db33f;   
+            background: var(--main-color); 
+            color:var(--color);
         }
 
 .tabela a:nth-child(3) {
@@ -89,5 +132,48 @@ body {
     .tabela{
        overflow-x:auto;
        display:block;
+    }
+}
+
+
+/* Page Home */
+
+.display-4 {
+    color: var(--main-color);
+}
+
+/* About */
+address a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+/* About imagem */
+.img{
+    width: 25vw;  
+    filter: grayscale(1);
+}
+
+/* Tecnologia usada /about*/
+.tecnology {
+    text-align: center;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    background: var(--main-color);
+    color: var(--color);
+}
+
+@media (max-width: 668px) {
+    .mobile {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .img {
+        width: 80vw;
     }
 }
